@@ -192,6 +192,26 @@ footer p{font-family:'Space Mono',monospace;font-size:0.58rem;color:var(--mut)}
   .outro-card--stack .outro-card__fill{height:auto;aspect-ratio:3/2;object-position:74% 34%}
 }
 
+
+/* CURRÍCULO PROFISSIONAL */
+.cv-wrap{background:var(--s1);border-top:1px solid var(--brd);border-bottom:1px solid var(--brd);padding:5rem 3rem}
+.cv-inner{max-width:1400px;margin:0 auto}
+.cv-intro{color:var(--mut);font-size:.9rem;line-height:1.8;margin:-1.2rem 0 2rem;max-width:620px}
+.cv-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(280px,.65fr);gap:1rem;align-items:stretch}
+.cv-reader{min-width:0;background:#101012;border:1px solid var(--brd)}
+.cv-reader-head{min-height:58px;padding:.8rem 1rem;display:flex;align-items:center;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--brd)}
+.cv-reader-label{font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mut)}
+.cv-download{font-family:'Space Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#080809;background:var(--acc);padding:.65rem .9rem;font-weight:700;white-space:nowrap}
+.cv-download:hover{opacity:.85}
+.cv-frame{display:block;width:100%;height:700px;border:0;background:#f3f3f3}
+.cv-fallback{padding:.8rem 1rem;color:var(--mut);font-size:.75rem;line-height:1.6}
+.cv-fallback a{color:var(--acc)}
+.cv-photo{position:relative;min-height:700px;overflow:hidden;background:#080809;border:1px solid var(--brd)}
+.cv-photo img{display:block;width:100%;height:100%;min-height:700px;object-fit:cover;object-position:42% 40%}
+.cv-photo figcaption{position:absolute;left:0;right:0;bottom:0;padding:2.5rem 1.2rem 1.2rem;background:linear-gradient(transparent,rgba(8,8,9,.88));font-family:'Space Mono',monospace;font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;color:#f0ece4}
+@media(max-width:900px){.cv-wrap{padding:4rem 2rem}.cv-grid{grid-template-columns:minmax(0,1.1fr) minmax(240px,.9fr)}.cv-frame{height:620px}.cv-photo,.cv-photo img{min-height:620px}}
+@media(max-width:680px){.cv-wrap{padding:3.5rem 1.2rem}.cv-grid{grid-template-columns:1fr}.cv-frame{height:68vh;min-height:520px}.cv-photo{min-height:0;aspect-ratio:4/5}.cv-photo img{min-height:0;height:100%}.cv-reader-head{padding:.75rem;gap:.5rem}.cv-reader-label{font-size:.55rem}}
+
 </style>
 </head>
 <body>
@@ -204,6 +224,7 @@ footer p{font-family:'Space Mono',monospace;font-size:0.58rem;color:var(--mut)}
   </div>
   <ul class="nav-links">
     <li><a href="#trabalhos">Trabalhos</a></li>
+    <li><a href="#curriculo">Currículo</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
   <a class="nav-cta" href="#contato">Contratar</a>
@@ -376,6 +397,32 @@ footer p{font-family:'Space Mono',monospace;font-size:0.58rem;color:var(--mut)}
 
   <div class="add-more">
     <p>Mais projetos em breve · <span>Envie seu briefing e vamos criar juntos</span></p>
+  </div>
+</section>
+
+<!-- CURRÍCULO PROFISSIONAL -->
+<section class="cv-wrap" id="curriculo">
+  <div class="cv-inner">
+    <div class="sh">
+      <span class="sn">CV</span>
+      <h2 class="st">Currículo profissional</h2>
+      <div class="sl"></div>
+    </div>
+    <p class="cv-intro">Conheça minha trajetória profissional, formação e experiências.</p>
+    <div class="cv-grid">
+      <div class="cv-reader">
+        <div class="cv-reader-head">
+          <span class="cv-reader-label">Currículo · PDF</span>
+          <a class="cv-download" href="assets/DIEGO%20ROBERT%20SILVA.pdf" download="DIEGO-ROBERT-SILVA-CV.pdf">Baixar PDF</a>
+        </div>
+        <iframe class="cv-frame" src="assets/DIEGO%20ROBERT%20SILVA.pdf#toolbar=1&navpanes=0&view=FitH" title="Currículo profissional de Diego Robert Silva" loading="lazy"></iframe>
+        <p class="cv-fallback">Se o currículo não aparecer neste visualizador, <a href="assets/DIEGO%20ROBERT%20SILVA.pdf" target="_blank" rel="noopener">abra o PDF em uma nova aba</a>.</p>
+      </div>
+      <figure class="cv-photo">
+        <img src="assets/IMG_1427.JPG" alt="Diego Robert Silva em um retrato com iluminação roxa" loading="lazy">
+        <figcaption>Diego Robert Silva · Captação, fotografia e edição audiovisual</figcaption>
+      </figure>
+    </div>
   </div>
 </section>
 
